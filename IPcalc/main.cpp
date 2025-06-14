@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 #include<Windows.h>
 #include <CommCtrl.h>
 #include<cstdio>
@@ -146,14 +146,14 @@ VOID PrintInfo(HWND hwnd)
 	SendMessage(hEditPrefix, WM_GETTEXT, 3, (LPARAM)sz_prefix);
 	dwIPprefix = atoi(sz_prefix);
 
-	sprintf(sz_IPaddress_buffer, "IP-адрес:\t\t\t %s", IPaddressToString(dwIPaddress, sz_buffer));
-	sprintf(sz_IPmask_buffer, "Маска подсети:\t\t %s", IPaddressToString(dwIPmask, sz_buffer));
-	sprintf(sz_IPaddress_binary, "IP-адрес (binary):\t\t %s", IPaddressToBinaryString(dwIPaddress, sz_buffer));
-	sprintf(sz_IPmask_binary, "Маска (binary):\t\t\t %s", IPaddressToBinaryString(dwIPmask, sz_buffer));
-	sprintf(sz_NetworkIP_buffer, "Адрес сети:\t\t\t %s", IPaddressToString(dwIPaddress & dwIPmask, sz_buffer));
-	sprintf(sz_BroadcastIP_buffer, "Широковещательный адрес:\t %s", IPaddressToString(dwIPaddress | ~dwIPmask, sz_buffer));
-	sprintf(sz_NumberOfIPs, "Количество IP-адресов:\t %u", 1 << (32 - dwIPprefix));
-	sprintf(sz_NumberOfHosts, "Количество узлов:\t\t %u", (1 << (32 - dwIPprefix)) - 2);
+	sprintf(sz_IPaddress_buffer, "IP-Р°РґСЂРµСЃ:\t\t\t %s", IPaddressToString(dwIPaddress, sz_buffer));
+	sprintf(sz_IPmask_buffer, "РњР°СЃРєР° РїРѕРґСЃРµС‚Рё:\t\t %s", IPaddressToString(dwIPmask, sz_buffer));
+	sprintf(sz_IPaddress_binary, "IP-Р°РґСЂРµСЃ (binary):\t\t %s", IPaddressToBinaryString(dwIPaddress, sz_buffer));
+	sprintf(sz_IPmask_binary, "РњР°СЃРєР° (binary):\t\t\t %s", IPaddressToBinaryString(dwIPmask, sz_buffer));
+	sprintf(sz_NetworkIP_buffer, "РђРґСЂРµСЃ СЃРµС‚Рё:\t\t\t %s", IPaddressToString(dwIPaddress & dwIPmask, sz_buffer));
+	sprintf(sz_BroadcastIP_buffer, "РЁРёСЂРѕРєРѕРІРµС‰Р°С‚РµР»СЊРЅС‹Р№ Р°РґСЂРµСЃ:\t %s", IPaddressToString(dwIPaddress | ~dwIPmask, sz_buffer));
+	sprintf(sz_NumberOfIPs, "РљРѕР»РёС‡РµСЃС‚РІРѕ IP-Р°РґСЂРµСЃРѕРІ:\t %u", 1 << (32 - dwIPprefix));
+	sprintf(sz_NumberOfHosts, "РљРѕР»РёС‡РµСЃС‚РІРѕ СѓР·Р»РѕРІ:\t\t %u", (1 << (32 - dwIPprefix)) - 2);
 
 	sprintf
 	(
