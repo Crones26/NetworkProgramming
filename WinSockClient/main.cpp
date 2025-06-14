@@ -94,9 +94,9 @@ void main()
 		if (iResult > 0)cout << "Bytes received: " << iResult << ", Message: " << recvbuffer << endl;
 		else if (iResult == 0)cout << "Connection closed" << endl;
 		else cout << "Recieve failed with code: " << WSAGetLastError() << endl;
-		/////////////////////////////////////////////
+		
 		if (strcmp(recvbuffer, SZ_SORRY) == 0)break;
-		/////////////////////////////////////////////
+
 		ZeroMemory(send_buffer, sizeof(send_buffer));
 		ZeroMemory(recvbuffer, sizeof(recvbuffer));
 
